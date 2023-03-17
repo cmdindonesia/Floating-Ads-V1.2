@@ -1,0 +1,103 @@
+/* SLIDER FLOATING ADS CSS */
+    .ad-slider {
+      width: 130px;
+      height: 500px;
+      background-color: #ccc;
+      position: fixed;
+      top: 50%;
+      right: -130px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      z-index: 9999;
+      transform: translateY(-50%);
+      transition: right 0.1s ease-out;
+    }
+
+    /* BUTTON CLOSE */
+    .close-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #333;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      padding: 5px 10px;
+    }
+     .ad-slider {
+     border-radius: 10px;
+    }
+   .ad-slider p {
+   text-indent: 10px;
+   }
+   .ad-slider img {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 500px;
+}
+
+  .close-button {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.close-button:hover {
+    background-color: red;
+}
+
+@media (max-width: 600px) {
+  .ad-slider {
+    width: 130px;
+    height: 500px;
+    top: 60%;
+    bottom: 0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    transform: translateY(-50%);
+    transition: right 0.1s ease-out;
+  }
+}
+
+HTML CODE
+
+<!-- SLIDER ADS HTML  -->
+  <div class='ad-slider'>
+<a href='URL LINK' target='_blank'>
+        <img alt='iklan gambar' src='URL GAMBAR'/>
+    </a>
+    <button class='close-button'>Close</button>
+
+<script>
+    // Bowo Ghoswtblack Fungsi untuk memunculkan iklan slider
+    function showAd() {
+      var adSlider = document.querySelector(&#39;.ad-slider&#39;);
+      adSlider.style.right = &#39;0&#39;;
+    }
+
+    // Bowo Ghostblack Fungsi untuk menyembunyikan iklan slider
+    function hideAd() {
+      var adSlider = document.querySelector(&#39;.ad-slider&#39;);
+      adSlider.style.right = &#39;-300px&#39;;
+    }
+
+    // Bowo Ghostblack Fungsi untuk menutup iklan slider
+    function closeAd() {
+      var closeButton = document.querySelector(&#39;.close-button&#39;);
+      closeButton.addEventListener(&#39;click&#39;, hideAd);
+    }
+
+    setInterval(showAd, 10000);
+    closeAd();
+</script></div>
+
